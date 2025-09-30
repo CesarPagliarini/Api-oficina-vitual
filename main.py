@@ -2,7 +2,6 @@ import os, uvicorn, socket, ssl
 from dotenv import load_dotenv
 from pathlib import Path
 from fastapi import FastAPI
-#from fastapi.routing import APIRoute, APIWebSocketRoute
 from fastapi.middleware.cors import CORSMiddleware
 from rutas.usuarios import login
 from rutas.dispositivos import onu

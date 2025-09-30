@@ -14,7 +14,7 @@ from retry import retry
 
 
 rutasOnu = APIRouter(route_class=VerifyTokenRoute, prefix="/onus", dependencies=[Depends(verificacionRol())])
-rutasOnu = APIRouter(prefix="/onus")
+#rutasOnu = APIRouter(prefix="/onus")
 
      
 @retry(tries=3, delay=1)
@@ -160,24 +160,5 @@ async def acciones(request: Request, onu: Onu = Depends(obtenerTipoOnu)):
         return JSONResponse(content={"message": f"No se pudo aplicar el {accion}, intente mas tarde"}, status_code=404)
         #return f"No se pudo aplicar el {accion}, intente mas tarde"
         
-         
-@rutasOnu.post("/ip/")
-async def direccionIp(request: Request, onu: Onu = Depends(obtenerTipoOnu)):
-    body = await request.json()
-    id_localidad = body.get('id_localidad')
-    id_acs = body.get('id') or ""               # Si 'id' es None o vacío, asignar un string vacío
-    serial = body.get('serial')
-    id_modelo = body.get('id_modelo')
-    id_firmware = body.get('id_firmware')
-    nombre_olt = body.get('nombre_olt')
-    interfaz = body.get('interfaz')
-    servicio = body.get('servicio')
-    placaPuerto, id = placaPuertoId(interfaz)
-    #print(id_localidad, serial, nombre_olt, interfaz, servicio, placaPuerto, id)
-    datos, status_code = await onu.obtenerIp(id_localidad, nombre_olt, placaPuerto, id, servicio, serial, id_firmware, id_modelo, id_acs)
-    if status_code == 204:
-        return Response(status_code=204)                                                # Si devuelve 204, no hay registros de la onu en la Db.
-    return JSONResponse(content=datos, status_code=status_code)
-
 
 
