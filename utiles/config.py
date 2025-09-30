@@ -60,36 +60,16 @@ class DatosConexionInfluxSanNicolas:
 # Mongo
 
 class DatosConexionMongoRosario:
-    DB_HOST:str = os.getenv('DB_HOST_MONGO_ROSARIO') 
-    DB_USUARIO:str = os.getenv('DB_USUARIO_MONGO_ROSARIO') 
-    DB_PASSWORD:str = os.getenv('DB_PASSWORD_MONGO_ROSARIO') 
-    DB_PUERTO:str = os.getenv('DB_PUERTO_MONGO_ROSARIO')
-    DB_NAME:str = os.getenv('DB_NAME_MONGO_ROSARIO')
-    DB_URL:str = DB_HOST + ":" + DB_PUERTO
+    pass
     
 class DatosConexionMongoSalta:
-    DB_HOST:str = os.getenv('DB_HOST_MONGO_SALTA') 
-    DB_USUARIO:str = os.getenv('DB_USUARIO_MONGO_SALTA') 
-    DB_PASSWORD:str = os.getenv('DB_PASSWORD_MONGO_SALTA') 
-    DB_PUERTO:str = os.getenv('DB_PUERTO_MONGO_SALTA')
-    DB_NAME:str = os.getenv('DB_NAME_MONGO_SALTA')
-    DB_URL:str = DB_HOST + ":" + DB_PUERTO
+    pass
     
 class DatosConexionMongoSantiago:
-    DB_HOST:str = os.getenv('DB_HOST_MONGO_SANTIAGO') 
-    DB_USUARIO:str = os.getenv('DB_USUARIO_MONGO_SANTIAGO') 
-    DB_PASSWORD:str = os.getenv('DB_PASSWORD_MONGO_SANTIAGO') 
-    DB_PUERTO:str = os.getenv('DB_PUERTO_MONGO_SANTIAGO')
-    DB_NAME:str = os.getenv('DB_NAME_MONGO_SANTIAGO')
-    DB_URL:str = DB_HOST + ":" + DB_PUERTO
+    pass
 
 class DatosConexionMongoSanNicolas:
-    DB_HOST:str = os.getenv('DB_HOST_MONGO_SAN-NICOLAS') 
-    DB_USUARIO:str = os.getenv('DB_USUARIO_MONGO_SAN-NICOLAS') 
-    DB_PASSWORD:str = os.getenv('DB_PASSWORD_MONGO_SAN-NICOLAS') 
-    DB_PUERTO:str = os.getenv('DB_PUERTO_MONGO_SAN-NICOLAS')
-    DB_NAME:str = os.getenv('DB_NAME_MONGO_SAN-NICOLAS')
-    DB_URL:str = DB_HOST + ":" + DB_PUERTO
+    pass
     
 # ACS
 

@@ -4,7 +4,6 @@ from modelos.parametro.parametros import parametros, firmware
 from utiles.config import DatosConexionInfluxRosario, DatosConexionInfluxSalta, DatosConexionInfluxSantiago, DatosConexionInfluxSanNicolas, DatosConexionMongoRosario, DatosConexionMongoSalta, DatosConexionMongoSantiago, DatosConexionMongoSanNicolas, DatosAcsRosario, DatosAcsSalta, DatosAcsSantiago, DatosAcsSanNicolas
 from pysnmp.hlapi import *                                                                  # Funciones para las consultas SNMP
 from datetime import datetime, timedelta
-from pymongo import MongoClient, DESCENDING, ASCENDING
 from typing import Optional
 import requests, os, json, re, pytz, paramiko, time, base64, platform, subprocess
 
